@@ -1,38 +1,42 @@
 <template>
   <div id="app">
-    <h1>{{ title }}</h1>
-    <Button @click="increment" outlined>Click me!</Button>
+    <ApartmentsList :items="apartment" />
   </div>
 </template>
 
 <script>
-import Button from './components/Button.vue';
+import ApartmentsList from './components/apartment/ApartmentsList.vue';
 export default {
   name: 'App',
   components: {
-    Button,
+    ApartmentsList,
   },
   data() {
     return {
-      amountOfClicks: 0,
+      apartment: {
+        id: 'sdasf13sda1f321asd',
+        title: 'Trolo-lo',
+        descr:
+          'lorem lorem trolo-lo lorem lorem trolo-lo lorem lorem trolo-lo lorem lorem trolo-lo lorem lorem trolo-lo',
+        price: 2032,
+        rating: 4.5,
+        location: {
+          city: 'Kherson',
+        },
+        owner: {
+          name: 'Ellen',
+          phone: '123-123-123',
+          email: 'qwe@mail.com',
+        },
+      },
     };
-  },
-  computed: {
-    title() {
-      return `Amount of clicks ${this.amountOfClicks}`;
-    },
-  },
-  methods: {
-    increment() {
-      this.amountOfClicks += 1;
-    },
   },
 };
 </script>
 
-<style>
+<style module>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
