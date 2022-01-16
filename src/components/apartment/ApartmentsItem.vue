@@ -16,16 +16,16 @@
 </template>
 
 <script>
-import StarRating from '../StarRating.vue';
+import StarRating from "../StarRating.vue";
 export default {
-  name: 'ApartmentsItem',
+  name: "ApartmentsItem",
   components: {
     StarRating,
   },
   props: {
     descr: {
       type: String,
-      default: '',
+      default: "",
     },
     rating: {
       type: Number,
@@ -37,7 +37,7 @@ export default {
     },
     imgSrc: {
       type: String,
-      default: '',
+      default: "",
     },
   },
 };
@@ -47,7 +47,8 @@ export default {
 .apartments-item {
   position: relative;
   max-width: 350px;
-  padding: 0 20px;
+  padding: 0 15px;
+  margin-bottom: 30px;
 
   &__inner {
     position: relative;

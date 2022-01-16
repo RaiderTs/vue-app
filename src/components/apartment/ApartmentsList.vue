@@ -1,22 +1,23 @@
 <template>
-  <div class="apartments-list">
-    <ApartmentsItem
-      v-for="{ id, descr, rating, price, imgSrc } in items"
-      :key="id"
-      :descr="descr"
-      :rating="rating"
-      :price="price"
-      :imgSrc="imgSrc"
-    />
-  </div>
+  <Container>
+    <slot name="title"> </slot>
+    <div class="apartments-list">
+      <!-- ************* -->
+      <template v-for="apartment in items">
+        <slot name="apartment" v-bind:apartment="apartment"></slot>
+      </template>
+      <!-- ************* -->
+    </div>
+    <slot name="description"></slot>
+  </Container>
 </template>
 
 <script>
-import ApartmentsItem from './ApartmentsItem.vue';
+import Container from "../shared/Container";
 export default {
-  name: 'ApartmentsList',
+  name: "ApartmentsList",
   components: {
-    ApartmentsItem,
+    Container,
   },
   props: {
     items: {
@@ -33,9 +34,5 @@ export default {
   flex-wrap: wrap;
   margin-left: -15px;
   margin-right: -15px;
-
-  &__item {
-    margin-bottom: 30px;
-  }
 }
 </style>
