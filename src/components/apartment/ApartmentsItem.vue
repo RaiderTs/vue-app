@@ -10,22 +10,25 @@
           <StarRating :rating="rating" />
         </div>
         <div class="apartments-item__price">UAH {{ price }}</div>
+        <a href="https://=facebook.com" @click.prevent.stop="handleLinkClick"
+          >facebook</a
+        >
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import StarRating from "../StarRating.vue";
+import StarRating from '../StarRating.vue';
 export default {
-  name: "ApartmentsItem",
+  name: 'ApartmentsItem',
   components: {
     StarRating,
   },
   props: {
     descr: {
       type: String,
-      default: "",
+      default: '',
     },
     rating: {
       type: Number,
@@ -37,7 +40,16 @@ export default {
     },
     imgSrc: {
       type: String,
-      default: "",
+      default: '',
+    },
+  },
+  methods: {
+    log(index, event) {
+      console.log(event);
+      console.log(index);
+    },
+    handleLinkClick() {
+      console.log('facebook clicked');
     },
   },
 };

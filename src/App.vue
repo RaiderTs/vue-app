@@ -1,7 +1,8 @@
 <template>
-  <div id="app">
+  <div :id="$style.app">
+    <h2>{{ text }}</h2>
+    <CustomInput v-model="text" />
     <ApartmentsList :items="apartments">
-      <template v-slot:title>TITLE</template>
       <template v-slot:apartment="{ apartment }">
         <ApartmentsItem
           :key="apartment.id"
@@ -9,6 +10,7 @@
           :rating="apartment.rating"
           :price="apartment.price"
           :imgSrc="apartment.imgSrc"
+          @click.native="handleItemClick"
         />
       </template>
     </ApartmentsList>
@@ -16,20 +18,28 @@
 </template>
 
 <script>
-import ApartmentsList from "./components/apartment/ApartmentsList.vue";
-import ApartmentsItem from "./components/apartment/ApartmentsItem.vue";
-import apartments from "./components/apartment/apartments";
+import ApartmentsList from './components/apartment/ApartmentsList.vue';
+import ApartmentsItem from './components/apartment/ApartmentsItem.vue';
+import apartments from './components/apartment/apartments';
+import CustomInput from './components/shared/CustomInput.vue';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     ApartmentsList,
     ApartmentsItem,
+    CustomInput,
   },
   data() {
     return {
       apartments,
+      text: '',
     };
+  },
+  methods: {
+    handleItemClick() {
+      console.log('item click');
+    },
   },
 };
 </script>
@@ -43,4 +53,5 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>
