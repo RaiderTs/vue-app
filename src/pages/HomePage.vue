@@ -13,6 +13,7 @@
             :rating="apartment.rating"
             :price="apartment.price"
             :imgSrc="apartment.imgSrc"
+            :id="apartment.id"
           />
         </template>
       </ApartmentsList>
