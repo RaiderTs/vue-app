@@ -1,5 +1,5 @@
 <template>
-  <img src="../assets/svg/logo.svg" alt="logo" class="logo" />
+  <img src="../assets/svg/logo.svg" alt="logo" />
 </template>
 
 <script>
@@ -8,8 +8,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.logo {
-  margin-left: 128px;
-}
-</style>
+<style lang="scss" scoped></style>
