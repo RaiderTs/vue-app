@@ -4,6 +4,7 @@
       v-for="item in formattedItems"
       :key="item.value"
       :value="item.value"
+      :selected="item.selected"
     >
       {{ item.label }}
     </option>
@@ -46,5 +47,6 @@ export default {
   padding: 8px 15px;
   cursor: pointer;
   display: inline-block;
+  min-width: 220px;
 }
 </style>

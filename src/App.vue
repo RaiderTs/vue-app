@@ -1,8 +1,9 @@
 <template>
-  <div :id="$style.app">
+  <div id="app">
     <h2>{{ text }}</h2>
-    <CustomSelect :items="['name', 'label', 'salary']" />
-    <CustomInput v-model="text" />
+    <Container>
+      <ApartmentFilterForm class="apartments-filter" @submit="logger" />
+    </Container>
     <ApartmentsList :items="apartments">
       <template v-slot:apartment="{ apartment }">
         <ApartmentsItem
@@ -22,16 +23,16 @@
 import ApartmentsList from './components/apartment/ApartmentsList.vue';
 import ApartmentsItem from './components/apartment/ApartmentsItem.vue';
 import apartments from './components/apartment/apartments';
-import CustomInput from './components/shared/CustomInput.vue';
-import CustomSelect from './components/shared/CustomSelect.vue';
+import ApartmentFilterForm from './components/apartment/ApartmentFilterForm.vue';
+import Container from './components/shared/Container.vue';
 
 export default {
   name: 'App',
   components: {
     ApartmentsList,
     ApartmentsItem,
-    CustomInput,
-    CustomSelect,
+    ApartmentFilterForm,
+    Container,
   },
   data() {
     return {
@@ -40,14 +41,14 @@ export default {
     };
   },
   methods: {
-    handleItemClick() {
-      console.log('item click');
+    logger(value) {
+      console.log('logger: ', value);
     },
   },
 };
 </script>
 
-<style module>
+<style lang="scss" scoped>
 #app {
   font-family: Montserrat, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -56,5 +57,7 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-
+.apartments-filter {
+  margin-bottom: 40px;
+}
 </style>
