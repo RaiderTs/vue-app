@@ -24,7 +24,7 @@ const apartments = [
       'https://st2.depositphotos.com/2018053/12011/i/950/depositphotos_120111848-stock-photo-modern-living-room.jpg',
     descr:
       'lorem lorem trolo-lo lorem lorem trolo-lo lorem lorem trolo-lo lorem lorem trolo-lo lorem lorem trolo-lo',
-    price: 2032,
+    price: 1500,
     rating: 3.2,
     location: {
       city: 'Kherson',
@@ -42,7 +42,7 @@ const apartments = [
       'https://st4.depositphotos.com/1000824/31306/i/1600/depositphotos_313064738-stock-photo-interior-in-a-living-room.jpg',
     descr:
       'lorem lorem trolo-lo lorem lorem trolo-lo lorem lorem trolo-lo lorem lorem trolo-lo lorem lorem trolo-lo',
-    price: 2032,
+    price: 1200,
     rating: 4,
     location: {
       city: 'Kherson',
@@ -60,7 +60,7 @@ const apartments = [
       'https://st4.depositphotos.com/23725382/27329/i/1600/depositphotos_273290964-stock-photo-interior-modern-living-room.jpg',
     descr:
       'lorem lorem trolo-lo lorem lorem trolo-lo lorem lorem trolo-lo lorem lorem trolo-lo lorem lorem trolo-lo',
-    price: 2032,
+    price: 2000,
     rating: 4.5,
     location: {
       city: 'Kherson',
@@ -78,7 +78,7 @@ const apartments = [
       'https://st4.depositphotos.com/23725382/27329/i/1600/depositphotos_273290964-stock-photo-interior-modern-living-room.jpg',
     descr:
       'lorem lorem trolo-lo lorem lorem trolo-lo lorem lorem trolo-lo lorem lorem trolo-lo lorem lorem trolo-lo',
-    price: 2032,
+    price: 1870,
     rating: 4.5,
     location: {
       city: 'Kherson',
@@ -96,7 +96,7 @@ const apartments = [
       'https://st4.depositphotos.com/23725382/27329/i/1600/depositphotos_273290964-stock-photo-interior-modern-living-room.jpg',
     descr:
       'lorem lorem trolo-lo lorem lorem trolo-lo lorem lorem trolo-lo lorem lorem trolo-lo lorem lorem trolo-lo',
-    price: 2032,
+    price: 1950,
     rating: 4.5,
     location: {
       city: 'Kherson',
@@ -114,10 +114,10 @@ const apartments = [
       'https://st4.depositphotos.com/23725382/27329/i/1600/depositphotos_273290964-stock-photo-interior-modern-living-room.jpg',
     descr:
       'lorem lorem trolo-lo lorem lorem trolo-lo lorem lorem trolo-lo lorem lorem trolo-lo lorem lorem trolo-lo',
-    price: 2032,
+    price: 1960,
     rating: 4.5,
     location: {
-      city: 'Kherson',
+      city: 'Kyiv',
     },
     owner: {
       name: 'Ellen',
@@ -132,7 +132,7 @@ const apartments = [
       'https://st4.depositphotos.com/23725382/27329/i/1600/depositphotos_273290964-stock-photo-interior-modern-living-room.jpg',
     descr:
       'lorem lorem trolo-lo lorem lorem trolo-lo lorem lorem trolo-lo lorem lorem trolo-lo lorem lorem trolo-lo',
-    price: 2032,
+    price: 1800,
     rating: 4.5,
     location: {
       city: 'Kherson',
