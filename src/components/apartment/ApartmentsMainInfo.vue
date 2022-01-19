@@ -5,7 +5,7 @@
       <StarRating :rating="apartment.rating" />
     </div>
     <img
-      :src="apartment.imgSrc"
+      :src="apartment.imgUrl"
       alt="imgApartment"
       class="apartment-main-info__photo"
     />

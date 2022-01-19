@@ -12,7 +12,7 @@
             :descr="apartment.descr"
             :rating="apartment.rating"
             :price="apartment.price"
-            :imgSrc="apartment.imgSrc"
+            :imgSrc="apartment.imgUrl"
             :id="apartment.id"
           />
         </template>
@@ -24,9 +24,10 @@
 <script>
 import ApartmentsList from '../components/apartment/ApartmentsList.vue';
 import ApartmentsItem from '../components/apartment/ApartmentsItem.vue';
-import apartments from '../components/apartment/apartments';
+// import apartments from '../components/apartment/apartments';
 import ApartmentFilterForm from '../components/apartment/ApartmentFilterForm.vue';
 import Container from '../components/shared/Container.vue';
+import { getApartmentsList } from '../services/apartments.service';
 
 export default {
   name: 'App',
@@ -38,7 +39,7 @@ export default {
   },
   data() {
     return {
-      apartments,
+      apartments: [],
       text: '',
       filters: {
         city: '',
@@ -50,6 +51,14 @@ export default {
     filteredApartments() {
       return this.filterByCityName(this.filterByPrice(this.apartments));
     },
+  },
+  async created() {
+    try {
+      const { data } = await getApartmentsList();
+      this.apartments = data;
+    } catch (error) {
+      console.error(error);
+    }
   },
   methods: {
     filter({ city, price }) {
