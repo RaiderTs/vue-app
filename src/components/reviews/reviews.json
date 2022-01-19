@@ -1,0 +1,22 @@
+[
+  {
+    "author": "John",
+    "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt explicabo magnam, at blanditiis corporis odit expedita magni. Quasi, illo id molestiae, natus minus quia sunt pariatur, ipsam eos consequuntur eligendi.",
+    "rating": 3.5
+  },
+  {
+    "author": "Alex",
+    "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt explicabo magnam, at blanditiis corporis odit expedita magni. Quasi, illo id molestiae, natus minus quia sunt pariatur, ipsam eos consequuntur eligendi.",
+    "rating": 4
+  },
+  {
+    "author": "Bill",
+    "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt explicabo magnam, at blanditiis corporis odit expedita magni. Quasi, illo id molestiae, natus minus quia sunt pariatur, ipsam eos consequuntur eligendi.",
+    "rating": 1
+  },
+  {
+    "author": "Bob",
+    "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt explicabo magnam, at blanditiis corporis odit expedita magni. Quasi, illo id molestiae, natus minus quia sunt pariatur, ipsam eos consequuntur eligendi.",
+    "rating": 5
+  }
+]

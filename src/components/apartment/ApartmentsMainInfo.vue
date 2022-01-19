@@ -32,6 +32,7 @@ export default {
 
 <style lang="scss" scoped>
 .apartment-main-info {
+  max-width: 730px;
   &__title {
     font-size: 20px;
     font-weight: 700;
