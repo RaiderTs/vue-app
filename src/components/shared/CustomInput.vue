@@ -19,6 +19,7 @@ export default {
       error: '',
     };
   },
+  inject: ['form'],
   inheritAttrs: false,
   props: {
     value: {
@@ -43,11 +44,20 @@ export default {
     },
   },
   watch: {
-    value(value) {
-      this.validate(value);
-      console.log(value);
+    value() {
+      this.validate();
     },
   },
+
+  mounted() {
+    if (!this.form) return;
+    this.form.registerInput(this);
+  },
+  beforeDestroy() {
+    if (!this.form) return;
+    this.form.unRegisterInput(this);
+  },
+
   methods: {
     validate(value) {
       this.isValid = this.rules.every((rule) => {
@@ -55,9 +65,11 @@ export default {
         if (!hasPassed) {
           this.error = message || this.errorMessage;
         }
-
         return hasPassed;
       });
+    },
+    reset() {
+      this.$emit('input', '');
     },
   },
 };
@@ -81,7 +93,7 @@ export default {
   }
 
   &--error {
-    border-color: red;
+    background-color: #ff8686;
   }
 
   &__error {

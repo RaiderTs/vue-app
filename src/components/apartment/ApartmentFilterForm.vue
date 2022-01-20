@@ -5,7 +5,7 @@
       type="number"
       v-model="price"
       placeholder="Цена, от"
-      error-message="Поле не должно быть пустым"
+      error-message="Не должно быть пустым"
       :rules="rules"
     />
     <SubmitButton class="form__submit" type="submit">Подбор жилья</SubmitButton>
